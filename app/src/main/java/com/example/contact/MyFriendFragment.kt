@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.my_friend_fragment.*
 
 class MyFriendFragment: Fragment() {
 
@@ -21,6 +22,11 @@ class MyFriendFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        fabAdd.setOnClickListener {
+            (activity as MainActivity).tampilAddFriendFragment()
+
+        }
     }
 
     override fun onDestroy() {
